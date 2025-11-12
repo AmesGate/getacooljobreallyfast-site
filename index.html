@@ -9,19 +9,20 @@
       --bg: #0a0a0a;
       --accent: #00ffc8;
       --text: #e0e0e0;
-      --muted: #888;
+      --muted: #999;
+      --error: #ff4d4d;
     }
     body {
       background: var(--bg);
       color: var(--text);
       font-family: 'Segoe UI', Roboto, sans-serif;
       text-align: center;
-      padding: 5%;
+      padding: 3% 10%;
     }
     h1 {
       color: var(--accent);
       font-size: 3em;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.2em;
     }
     h2 {
       color: var(--muted);
@@ -32,54 +33,108 @@
       margin: 1em auto;
       line-height: 1.6em;
     }
+    form {
+      background: rgba(0,255,200,0.08);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 2em;
+      margin: 3em auto;
+      max-width: 600px;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6em;
+      margin-top: 0.3em;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      background: #111;
+      color: var(--text);
+    }
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
     .btn {
       display: inline-block;
-      margin-top: 2em;
-      padding: 1em 2em;
-      color: var(--bg);
       background: var(--accent);
+      color: var(--bg);
+      font-weight: bold;
+      padding: 0.8em 1.5em;
       border: none;
       border-radius: 4px;
-      font-weight: bold;
       cursor: pointer;
-      transition: transform 0.2s ease-in-out;
-      text-decoration: none;
+      margin-top: 1.5em;
+      transition: transform 0.2s;
     }
     .btn:hover {
       transform: scale(1.05);
     }
     footer {
       margin-top: 4em;
-      font-size: 0.9em;
+      font-size: 0.85em;
       color: var(--muted);
     }
-    .banner {
-      background: rgba(0,255,200,0.1);
-      padding: 1em;
-      border: 1px solid var(--accent);
-      border-radius: 6px;
-      max-width: 750px;
-      margin: 2em auto;
+    .tiny {
+      color: var(--error);
+      font-size: 0.8em;
     }
   </style>
 </head>
 <body>
   <h1>🚀 Get A Cool Job Really Fast</h1>
-  <h2>Because “Employment Opportunity!!!” totally sounds legit.</h2>
+  <h2>Because totally-legit offers always come in ALL CAPS.</h2>
 
-  <div class="banner">
-    <p><strong>Now Hiring:</strong> Overly Enginerded Interns for a top-secret photography start-up run entirely from a Wi-Fi router and an over-caffeinated IT student.</p>
-    <p>Earn up to <em>$300 imaginary dollars weekly*</em> while protecting our network from phishing, malware, and poorly written assignments.</p>
-  </div>
+  <p>
+    Welcome, future “employee”! Before you click any links that promise
+    unrealistic pay for minimal effort, please complete this <strong>Totally Legitimate Job Application</strong>.
+  </p>
 
-  <p>This site was built as part of a networking project and is 100% satire.  
-  If you arrived here expecting an actual job offer, please report yourself to IT for clicking suspicious links.</p>
+  <form id="fakeApp">
+    <label for="fullname">Full Name (First, Middle Initial, Hacker Alias)</label>
+    <input type="text" id="fullname" placeholder="John Q. ThreatActor" required />
 
-  <a href="https://www.rockymountainpineworks.com" class="btn">Apply Anyway</a>
+    <label for="email">Email Address (preferably something suspicious)</label>
+    <input type="email" id="email" placeholder="hr@notascam.biz" required />
+
+    <label for="firewall">Favorite Firewall Brand</label>
+    <select id="firewall">
+      <option>— Select One —</option>
+      <option>SonicWall</option>
+      <option>pfSense</option>
+      <option>Fortinet</option>
+      <option>Cisco ASA</option>
+      <option>Whatever’s Cheapest</option>
+    </select>
+
+    <label for="ping">How fast can you ping?</label>
+    <input type="text" id="ping" placeholder="In milliseconds or miles per hour" />
+
+    <label for="experience">Describe your experience with suspicious emails:</label>
+    <textarea id="experience" placeholder="Example: I once clicked a link and immediately regretted it."></textarea>
+
+    <p class="tiny">⚠️ Warning: Submitting this form does absolutely nothing.</p>
+
+    <button class="btn" type="button" onclick="alert('Nice try. No data was stolen. Yet.')">
+      Submit Application
+    </button>
+  </form>
+
+  <p>
+    This website exists purely to make fun of phishing emails and bad web assignments.
+    No personal data is collected, stored, or monetized (not even hypothetically).
+  </p>
 
   <footer>
-    <p>*Terms and conditions apply. No, they don’t.</p>
-    <p>© 2025 AmesGate | Project: getacooljobreallyfast.work</p>
+    <p>© 2025 AmesGate | Educational Parody Project</p>
+    <p>Lesson learned: <em>Always verify before you click.</em></p>
   </footer>
 </body>
 </html>
